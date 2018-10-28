@@ -4,7 +4,7 @@ const sass          = require('gulp-sass');
 const sourcemaps    = require('gulp-sourcemaps');
 const autoprefixer  = require('gulp-autoprefixer');
 const ghPages       = require('gulp-gh-pages');
-const realFavicon   = require ('gulp-real-favicon');
+const realFavicon   = require('gulp-real-favicon');
 const fs            = require('fs');
 
 gulp.task('serve', ['sass'], function() {
@@ -12,8 +12,8 @@ gulp.task('serve', ['sass'], function() {
     files: "styles.css",
     // httpd-vhosts.conf users:
     open: "external",
-    host: "project-starter.test",
-    proxy: "project-starter.test/public",
+    host: "user-profile.test",
+    proxy: "user-profile.test/public",
     port: 3000
   });
 
