@@ -1,0 +1,46 @@
+.brand-button,
+button,
+button[type=submit],
+input[type=submit] {
+  border: none;
+  border-radius: 20px;
+  color: var(--brand-white);
+  background: var(--vermillion);
+  padding: 10px 20px;
+  transition: background 0.25s ease;
+  &:hover {
+    color: var(--brand-white);
+    background: var(--pizazz);
+  }
+  &.--weight-600 {
+    font-weight: 600;
+  }
+  &.--cod-text {
+    color: var(--cod);
+  }
+  &.--red-gradient-background {
+    background: linear-gradient(to right, var(--vermillion) 51%, var(--pizazz) 100%);
+    transition: .25s;
+    background-size: 200% auto;
+    &:hover {
+      background-position: right center;
+    }
+  }
+  &.--white-background {
+    background: var(--brand-white);
+    transition: .25s;
+    &:hover {
+      color: var(--brand-white);
+      background: var(--mountain-mist);
+    }
+  }
+  &.--grey-border {
+    border: 1px solid var(--cod);
+  }
+  &.--mountain-mist-border {
+    border: 1px solid var(--mountain-mist);
+  }
+  &+button {
+    margin-left: calculateMargin(10px);
+  }
+}
