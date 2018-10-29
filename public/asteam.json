@@ -1,0 +1,26 @@
+{
+  "companyName": "Alexander Stone",
+  "team": [
+    {
+      "name": "Emma",
+      "title": "Senior Architect",
+      "email": "emma@alexanderstone.com",
+      "phone": "00 590 639 63559",
+      "image": "./images/emma-1.jpg"
+    },
+    {
+      "name": "Jacob",
+      "title": "Founder | Senior Architect",
+      "email": "jacob@alexanderstone.com",
+      "phone": "00 590 639 63889",
+      "image": ""
+    },
+    {
+      "name": "Wang Li",
+      "title": "Architect Assistant",
+      "email": "wangli@alexanderstone.com",
+      "phone": "00 590 639 63009",
+      "image": ""
+    }
+  ]
+}
