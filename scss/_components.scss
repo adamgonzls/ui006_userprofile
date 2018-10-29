@@ -1,3 +1,7 @@
+ul {
+  list-style-type: none;
+}
+
 .brand-button,
 button,
 button[type=submit],
@@ -42,5 +46,19 @@ input[type=submit] {
   }
   &+button {
     margin-left: calculateMargin(10px);
+  }
+}
+
+.social {
+  div {
+    display: inline-block;
+    positon: relative;
+    span {
+      background: var(--pumice);
+      color:var(--shadow);
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+    }
   }
 }

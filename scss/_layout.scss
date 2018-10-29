@@ -1,5 +1,7 @@
 :root {
-  --brand-white: #fffffe;
+  --darkness: #1d1d1d;
+  --pumice: #c5c5c5;
+  --shadow: #1b1b1b;
   --cod: #111;
   --black-russian: #242528;
   --mountain-mist: #959595;
@@ -7,4 +9,59 @@
   --shark: #232527;
   --vermillion: #ff4204;
   --pizazz: #ff8a05
+}
+
+.page-container {
+  background: var(--darkness);
+  height: 100vh;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 400px;
+  background: var(--alabaster);
+  padding-top: calculateMargin(40px);
+  text-align: center;
+}
+
+.user-pic {
+  img {
+    display: block;
+    width: 400px;
+    filter: grayscale(100%);
+    transition: filter .25s ease;
+    &:hover {
+      filter: grayscale(80%);
+    }
+  }
+}
+
+.user-info {
+  padding-top: calculateMargin(10px);
+  padding-bottom: calculateMargin(10px);
+  color: var(--pumice);
+  background: var(--shadow);
+  .name,
+  .title {
+    display: block;
+    text-transform: uppercase;
+  }
+  .name {
+    @include fontSize(24px);
+    font-weight: 100;
+  }
+  .title {
+    font-weight: 400;
+  }
+  .contact-info {
+    margin-bottom: calculateMargin(10px);
+  }
+  .social {
+    ul {
+      padding-left: 0;
+    }
+    li {
+      display: inline-block;
+    }
+  }
 }
