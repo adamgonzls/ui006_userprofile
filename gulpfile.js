@@ -9,12 +9,13 @@ const fs            = require('fs');
 
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
-    files: "styles.css",
-    // httpd-vhosts.conf users:
-    open: "external",
-    host: "user-profile.test",
-    proxy: "user-profile.test/public",
-    port: 3000
+    // files: "styles.css",
+    // // httpd-vhosts.conf users:
+    // open: "external",
+    // host: "user-profile.test",
+    // proxy: "user-profile.test/public",
+    // port: 3000
+    server: "./public/"
   });
 
   gulp.watch("./scss/**/*.scss", ['sass']);
