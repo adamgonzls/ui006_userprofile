@@ -15,7 +15,7 @@
       "title": "Founder | Senior Architect",
       "email": "jacob@alexanderstone.com",
       "phone": "00 590 639 63889",
-      "image": ""
+      "image": "./images/jacob-1.jpg"
     },
     {
       "id" : "3",
@@ -23,7 +23,15 @@
       "title": "Architect Assistant",
       "email": "wangli@alexanderstone.com",
       "phone": "00 590 639 63009",
-      "image": ""
+      "image": "./images/wang-li-1.jpg"
+    },
+    {
+      "id" : "4",
+      "name": "Snarls Barkley",
+      "title": "Consultant",
+      "email": "snarls@alexanderstone.com",
+      "phone": "00 590 639 63001",
+      "image": "./images/snarls-1.jpg"
     }
   ]
 }
