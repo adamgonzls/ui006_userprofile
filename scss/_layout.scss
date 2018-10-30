@@ -12,7 +12,7 @@
 }
 
 .page-container {
-  background: var(--darkness);
+  background: var(--shadow);
   height: 100vh;
 }
 
@@ -20,9 +20,15 @@ main {
   margin: 0 auto;
   max-width: 400px;
   color: var(--platinum);
-  background: var(--shadow);
+  background: var(--darkness);
   padding-top: calculateMargin(40px);
   text-align: center;
+  h1 {
+    margin-bottom: 0;
+    @include fontSize(13px);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
 }
 
 nav {
@@ -45,7 +51,7 @@ nav {
   padding-top: calculateMargin(10px);
   padding-bottom: calculateMargin(10px);
   color: var(--pumice);
-  background: var(--shadow);
+  background: var(--darkness);
   .name,
   .title {
     display: block;
@@ -57,11 +63,13 @@ nav {
     font-weight: 100;
   }
   .title {
-    margin-bottom: calculateMargin(10px);
+    margin-bottom: calculateMargin(5px);
+    @include fontSize(13px);
     font-weight: 400;
   }
   .contact-info {
-    margin-bottom: calculateMargin(15px);
+    @include fontSize(12px);
+    margin-bottom: calculateMargin(10px);
   }
   .social {
     ul {
