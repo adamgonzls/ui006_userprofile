@@ -2,7 +2,7 @@
   --darkness: #1d1d1d;
   --pumice: #c5c5c5;
   --shadow: #1b1b1b;
-  --cod: #111;
+  --platinum: #e4e3e4;
   --black-russian: #242528;
   --mountain-mist: #959595;
   --alabaster: #f8f8f8;
@@ -19,9 +19,14 @@
 main {
   margin: 0 auto;
   max-width: 400px;
-  background: var(--alabaster);
+  color: var(--platinum);
+  background: var(--shadow);
   padding-top: calculateMargin(40px);
   text-align: center;
+}
+
+nav {
+  margin-bottom: calculateMargin(20px);
 }
 
 .user-pic {
@@ -44,6 +49,7 @@ main {
   .name,
   .title {
     display: block;
+    color: var(--platinum);
     text-transform: uppercase;
   }
   .name {
@@ -51,10 +57,11 @@ main {
     font-weight: 100;
   }
   .title {
+    margin-bottom: calculateMargin(10px);
     font-weight: 400;
   }
   .contact-info {
-    margin-bottom: calculateMargin(10px);
+    margin-bottom: calculateMargin(15px);
   }
   .social {
     ul {
