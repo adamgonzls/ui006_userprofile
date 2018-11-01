@@ -1,11 +1,18 @@
 const requestURL = 'http://localhost:3000/asteam.json';
 const request = new XMLHttpRequest();
+const backArrow = document.querySelector('.direction-arrow.back');
+const forwardArrow = document.querySelector('.direction-arrow.forward');
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 request.onload = function() {
   const data = request.response;
   loadUser(data);
+}
+
+function advanceUser() {
+  console.log("forward");
+  console.log(data);
 }
 
 function loadUser(data) {
@@ -27,3 +34,4 @@ function loadUser(data) {
   // }, false);
 }
 
+forwardArrow.addEventListener("click", advanceUser, false);
