@@ -2,6 +2,20 @@ ul {
   list-style-type: none;
 }
 
+.direction-arrow {
+  position: absolute;
+  bottom: 0;
+  background: red;
+  border-radius: 50%;
+  cursor: pointer;
+  &.back {
+    left: 0;
+  }
+  &.forward {
+    right: 0;
+  }
+}
+
 .brand-button,
 button,
 button[type=submit],
@@ -52,16 +66,12 @@ input[type=submit] {
 .social {
   ul {
     margin-top: 0;
-  }
-  div {
-    display: inline-block;
-    positon: relative;
-    span {
-      background: var(--pumice);
-      color:var(--shadow);
-      display: inline-block;
-      width: 25px;
-      height: 25px;
+    li {
+      color: var(--platinum);
+      transition: color .25s ease;
+      &:hover {
+        color: var(--pumice);
+      }
     }
   }
 }

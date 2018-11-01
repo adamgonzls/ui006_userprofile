@@ -18,7 +18,7 @@
 
 main {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 320px;
   color: var(--platinum);
   background: var(--darkness);
   padding-top: calculateMargin(40px);
@@ -36,9 +36,10 @@ nav {
 }
 
 .user-pic {
+  position: relative;
   img {
     display: block;
-    width: 400px;
+    width: 320px;
     filter: grayscale(100%);
     transition: filter .25s ease;
     &:hover {
@@ -59,6 +60,7 @@ nav {
     text-transform: uppercase;
   }
   .name {
+    color: var(--pumice);
     @include fontSize(24px);
     font-weight: 100;
   }
