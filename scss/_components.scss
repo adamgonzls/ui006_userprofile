@@ -4,8 +4,10 @@ ul {
 
 .direction-arrow {
   position: absolute;
-  bottom: 0;
-  background: red;
+  border: 2px solid red;
+  bottom: 50%;
+  font-size: 36px;
+  background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
   &.back {
