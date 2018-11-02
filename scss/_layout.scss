@@ -18,7 +18,7 @@
 
 main {
   margin: 0 auto;
-  max-width: 320px;
+  max-width: 250px;
   color: var(--platinum);
   background: var(--darkness);
   padding-top: calculateMargin(40px);
@@ -39,7 +39,7 @@ nav {
   position: relative;
   img {
     display: block;
-    width: 320px;
+    width: 250px;
     filter: grayscale(100%);
     transition: filter .25s ease;
     &:hover {
