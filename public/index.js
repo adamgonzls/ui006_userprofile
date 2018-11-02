@@ -10,28 +10,42 @@ request.onload = function() {
   loadUser(data);
 }
 
-function advanceUser() {
-  console.log("forward");
-  console.log(data);
-}
-
 function loadUser(data) {
   const teamMemberImage = document.querySelector('.user-pic img');
   const teamMemberName = document.querySelector('.user-info .name');
   const teamMemberTitle = document.querySelector('.user-info .title');
   const teamMemberEmail = document.querySelector('.contact-info .email');
   const teamMemberPhone = document.querySelector('.contact-info .phone');
-  console.log(data)
-  // document.addEventListener('DOMContentLoaded', function() {
-    // userImage
-    teamMemberImage.src = data.team[0].image;
-    teamMemberImage.alt = data.team[0].name;
-    teamMemberName.innerHTML = data.team[0].name;
-    teamMemberTitle.innerHTML = data.team[0].title;
-    teamMemberEmail.innerHTML = data.team[0].email;
-    teamMemberPhone.innerHTML = data.team[0].phone;
+  const teamMembers = data.team;
+  // const currentMember = 
+  console.log(teamMembers);
+  
+  let displayedMember       = data.team[0];
+  console.log(displayedMember);
+  teamMemberImage.src       = data.team[0].image;
+  teamMemberImage.alt       = data.team[0].name;
+  teamMemberName.innerHTML  = data.team[0].name;
+  teamMemberTitle.innerHTML = data.team[0].title;
+  teamMemberEmail.innerHTML = data.team[0].email;
+  teamMemberPhone.innerHTML = data.team[0].phone;
 
-  // }, false);
+  function getCurrentIndex() {
+
+  }
+
+  function advanceUser() {
+    // userID = 
+    if (teamMembers.indexOf(displayedMember) + 1 < teamMembers.length) {
+      console.log(teamMembers.indexOf(displayedMember) + 1);
+      // displayedMember++;
+      // console.log(displayedMember);
+    } else {
+      console.log('back to start');
+    }
+
+    console.log("forward");
+    // console.log(data);
+  }
+
+  forwardArrow.addEventListener("click", advanceUser, false);
 }
-
-forwardArrow.addEventListener("click", advanceUser, false);
