@@ -7,7 +7,7 @@
       "title": "Senior Architect",
       "email": "emma@alexanderstone.com",
       "phone": "00 590 639 63559",
-      "image": "./images/emma-1.jpg"
+      "image": "./images/emma-sm.jpg"
     },
     {
       "id" : "2",
@@ -15,7 +15,7 @@
       "title": "Founder | Senior Architect",
       "email": "jacob@alexanderstone.com",
       "phone": "00 590 639 63889",
-      "image": "./images/jacob-1.jpg"
+      "image": "./images/jacob-sm.jpg"
     },
     {
       "id" : "3",
@@ -23,7 +23,7 @@
       "title": "Architect Assistant",
       "email": "wangli@alexanderstone.com",
       "phone": "00 590 639 63009",
-      "image": "./images/wang-li-1.jpg"
+      "image": "./images/wang-li-sm.jpg"
     },
     {
       "id" : "4",
@@ -31,7 +31,7 @@
       "title": "Consultant",
       "email": "snarls@alexanderstone.com",
       "phone": "00 590 639 63001",
-      "image": "./images/snarls-1.jpg"
+      "image": "./images/snarls-sm.jpg"
     }
   ]
 }
