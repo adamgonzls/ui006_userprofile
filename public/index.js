@@ -12,39 +12,43 @@ request.onload = function() {
 
 function loadUser(data) {
   const teamMemberImage = document.querySelector('.user-pic img');
-  const teamMemberName = document.querySelector('.user-info .name');
+  const teamMemberName  = document.querySelector('.user-info .name');
   const teamMemberTitle = document.querySelector('.user-info .title');
   const teamMemberEmail = document.querySelector('.contact-info .email');
   const teamMemberPhone = document.querySelector('.contact-info .phone');
-  const teamMembers = data.team;
-  // const currentMember = 
+  const teamMembers     = data.team;
+  let displayMemberID   = 0;
+  
   console.log(teamMembers);
   
-  let displayedMember       = data.team[0];
-  console.log(displayedMember);
-  teamMemberImage.src       = data.team[0].image;
-  teamMemberImage.alt       = data.team[0].name;
-  teamMemberName.innerHTML  = data.team[0].name;
-  teamMemberTitle.innerHTML = data.team[0].title;
-  teamMemberEmail.innerHTML = data.team[0].email;
-  teamMemberPhone.innerHTML = data.team[0].phone;
+  showTeamMember(displayMemberID);
 
-  function getCurrentIndex() {
-
+  function showTeamMember(displayMemberID) {
+    teamMemberImage.src       = data.team[displayMemberID].image;
+    teamMemberImage.alt       = data.team[displayMemberID].name;
+    teamMemberName.innerHTML  = data.team[displayMemberID].name;
+    teamMemberTitle.innerHTML = data.team[displayMemberID].title;
+    teamMemberEmail.innerHTML = data.team[displayMemberID].email;
+    teamMemberPhone.innerHTML = data.team[displayMemberID].phone;
   }
+  // console.log(displayedMemberID);
+
+  // function getCurrentIndex(displayedMemberID) {
+    console.log(teamMembers.map(x => x.id).indexOf(displayMemberID));
+  // }
 
   function advanceUser() {
-    // userID = 
-    if (teamMembers.indexOf(displayedMember) + 1 < teamMembers.length) {
-      console.log(teamMembers.indexOf(displayedMember) + 1);
-      // displayedMember++;
-      // console.log(displayedMember);
+    // getCurrentIndex()
+    console.log("forward");
+    ++displayMemberID;
+    if ((displayMemberID + 1) <= teamMembers.length) {
+      console.log("current user: " + displayMemberID + " total members: " + teamMembers.length);
+      
+      console.log(displayMemberID);
+      showTeamMember(displayMemberID);
     } else {
       console.log('back to start');
     }
-
-    console.log("forward");
-    // console.log(data);
   }
 
   forwardArrow.addEventListener("click", advanceUser, false);
