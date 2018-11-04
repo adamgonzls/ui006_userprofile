@@ -11,45 +11,48 @@ request.onload = function() {
 }
 
 function loadUser(data) {
-  const teamMemberImage = document.querySelector('.user-pic img');
-  const teamMemberName  = document.querySelector('.user-info .name');
-  const teamMemberTitle = document.querySelector('.user-info .title');
-  const teamMemberEmail = document.querySelector('.contact-info .email');
-  const teamMemberPhone = document.querySelector('.contact-info .phone');
-  const teamMembers     = data.team;
-  let displayMemberID   = 0;
+  const teamMemberImage   = document.querySelector('.user-pic img');
+  const teamMemberName    = document.querySelector('.user-info .name');
+  const teamMemberTitle   = document.querySelector('.user-info .title');
+  const teamMemberEmail   = document.querySelector('.contact-info .email');
+  const teamMemberPhone   = document.querySelector('.contact-info .phone');
+  const teamMembers       = data.team;
+  let displayMemberIndex  = 0;
   
   console.log(teamMembers);
   
-  showTeamMember(displayMemberID);
+  showTeamMember(displayMemberIndex);
 
-  function showTeamMember(displayMemberID) {
-    teamMemberImage.src       = data.team[displayMemberID].image;
-    teamMemberImage.alt       = data.team[displayMemberID].name;
-    teamMemberName.innerHTML  = data.team[displayMemberID].name;
-    teamMemberTitle.innerHTML = data.team[displayMemberID].title;
-    teamMemberEmail.innerHTML = data.team[displayMemberID].email;
-    teamMemberPhone.innerHTML = data.team[displayMemberID].phone;
+  function showTeamMember(displayMemberIndex) {
+    teamMemberImage.src       = data.team[displayMemberIndex].image;
+    teamMemberImage.alt       = data.team[displayMemberIndex].name;
+    teamMemberName.innerHTML  = data.team[displayMemberIndex].name;
+    teamMemberTitle.innerHTML = data.team[displayMemberIndex].title;
+    teamMemberEmail.innerHTML = data.team[displayMemberIndex].email;
+    teamMemberPhone.innerHTML = data.team[displayMemberIndex].phone;
   }
-  // console.log(displayedMemberID);
 
-  // function getCurrentIndex(displayedMemberID) {
-    console.log(teamMembers.map(x => x.id).indexOf(displayMemberID));
-  // }
-
-  function advanceUser() {
-    // getCurrentIndex()
-    console.log("forward");
-    ++displayMemberID;
-    if ((displayMemberID + 1) <= teamMembers.length) {
-      console.log("current user: " + displayMemberID + " total members: " + teamMembers.length);
-      
-      console.log(displayMemberID);
-      showTeamMember(displayMemberID);
+  function advanceUser(e) {
+    if(event.target.classList.contains('forward')) {
+      displayMemberIndex++;
+      if ((displayMemberIndex + 1) <= teamMembers.length) {
+        showTeamMember(displayMemberIndex);
+      } else {
+        displayMemberIndex = 0;
+        showTeamMember(displayMemberIndex);
+      }
     } else {
-      console.log('back to start');
+      console.log("current pos: " + displayMemberIndex + " total members: " + teamMembers.length);
+      displayMemberIndex--;
+      if ((displayMemberIndex) >= 0) {
+        showTeamMember(displayMemberIndex);
+      } else {
+        displayMemberIndex = (teamMembers.length - 1);
+        showTeamMember(displayMemberIndex);
+      }
     }
   }
 
   forwardArrow.addEventListener("click", advanceUser, false);
+  backArrow.addEventListener("click", advanceUser, false);
 }
