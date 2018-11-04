@@ -1,0 +1,224 @@
+/****************************************
+  Inherited Syles
+*****************************************/
+/*
+See this explanation for details
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #444;
+  font: 100% 'Roboto', sans-serif, Arial;
+  font-weight: 300; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  color: inherit;
+  font: inherit; }
+
+/****************************************
+  Resets
+*****************************************/
+body {
+  margin: 0; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+header {
+  font-size: 40px;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--cod); }
+
+h1 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  margin-bottom: 1.25rem; }
+
+h2 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
+
+a {
+  text-decoration: none; }
+
+p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  line-height: 160%;
+  font-weight: 400; }
+  p > code {
+    display: inline-block; }
+
+:root {
+  --darkness: #1d1d1d;
+  --pumice: #c5c5c5;
+  --shadow: #1b1b1b;
+  --platinum: #e4e3e4;
+  --black-russian: #242528;
+  --mountain-mist: #959595;
+  --alabaster: #f8f8f8;
+  --shark: #232527;
+  --vermillion: #ff4204;
+  --pizazz: #ff8a05
+; }
+
+.page-container {
+  background: var(--shadow);
+  height: 100vh; }
+
+main {
+  margin: 0 auto;
+  max-width: 250px;
+  color: var(--platinum);
+  background: var(--darkness);
+  padding-top: 2.5rem;
+  text-align: center; }
+  main h1 {
+    margin-bottom: 0;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    text-transform: uppercase; }
+
+nav {
+  margin-bottom: 1.25rem; }
+
+.user-pic {
+  position: relative; }
+  .user-pic img {
+    display: block;
+    width: 250px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: -webkit-filter .25s ease;
+    transition: -webkit-filter .25s ease;
+    transition: filter .25s ease;
+    transition: filter .25s ease, -webkit-filter .25s ease; }
+
+.user-info {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  color: var(--pumice);
+  background: var(--darkness); }
+  .user-info .name,
+  .user-info .title {
+    display: block;
+    color: var(--platinum);
+    text-transform: uppercase; }
+  .user-info .name {
+    color: var(--pumice);
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 100; }
+  .user-info .title {
+    margin-bottom: 0.3125rem;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-weight: 400; }
+  .user-info .contact-info {
+    font-size: 12px;
+    font-size: 0.75rem;
+    margin-bottom: 0.625rem; }
+  .user-info .social ul {
+    padding-left: 0; }
+  .user-info .social li {
+    display: inline-block; }
+
+.background-cod {
+  background-color: #111; }
+
+ul {
+  list-style-type: none; }
+
+.direction-arrow {
+  position: absolute;
+  border: 2px solid red;
+  bottom: 33%;
+  font-size: 36px;
+  font-weight: 100;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer; }
+  .direction-arrow:hover {
+    font-weight: 300; }
+  .direction-arrow.back {
+    left: 0; }
+  .direction-arrow.forward {
+    right: 0; }
+
+.brand-button,
+button,
+button[type=submit],
+input[type=submit] {
+  border: none;
+  border-radius: 20px;
+  color: var(--brand-white);
+  background: var(--vermillion);
+  padding: 10px 20px;
+  -webkit-transition: background 0.25s ease;
+  transition: background 0.25s ease; }
+  .brand-button:hover,
+  button:hover,
+  button[type=submit]:hover,
+  input[type=submit]:hover {
+    color: var(--brand-white); }
+  .brand-button.--red-gradient-background,
+  button.--red-gradient-background,
+  button[type=submit].--red-gradient-background,
+  input[type=submit].--red-gradient-background {
+    background: -webkit-gradient(linear, left top, right top, color-stop(51%, var(--vermillion)), to(var(--pizazz)));
+    background: linear-gradient(to right, var(--vermillion) 51%, var(--pizazz) 100%);
+    -webkit-transition: .25s;
+    transition: .25s;
+    background-size: 200% auto; }
+    .brand-button.--red-gradient-background:hover,
+    button.--red-gradient-background:hover,
+    button[type=submit].--red-gradient-background:hover,
+    input[type=submit].--red-gradient-background:hover {
+      background-position: right center; }
+  .brand-button.--white-background,
+  button.--white-background,
+  button[type=submit].--white-background,
+  input[type=submit].--white-background {
+    background: var(--brand-white);
+    -webkit-transition: .25s;
+    transition: .25s; }
+    .brand-button.--white-background:hover,
+    button.--white-background:hover,
+    button[type=submit].--white-background:hover,
+    input[type=submit].--white-background:hover {
+      color: var(--brand-white);
+      background: var(--mountain-mist); }
+  .brand-button.--grey-border,
+  button.--grey-border,
+  button[type=submit].--grey-border,
+  input[type=submit].--grey-border {
+    border: 1px solid var(--cod); }
+  .brand-button.--mountain-mist-border,
+  button.--mountain-mist-border,
+  button[type=submit].--mountain-mist-border,
+  input[type=submit].--mountain-mist-border {
+    border: 1px solid var(--mountain-mist); }
+  .brand-button + button,
+  button + button,
+  button[type=submit] + button,
+  input[type=submit] + button {
+    margin-left: 0.625rem; }
+
+.social ul {
+  margin-top: 0; }
+  .social ul li {
+    color: var(--platinum);
+    -webkit-transition: color .25s ease;
+    transition: color .25s ease; }
+    .social ul li:hover {
+      color: var(--pumice); }
+
+/*# sourceMappingURL=maps/styles.css.map */
