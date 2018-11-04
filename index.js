@@ -1,4 +1,4 @@
-const requestURL = 'http://localhost:3000/asteam.json';
+const requestURL = './asteam.json';
 const request = new XMLHttpRequest();
 const backArrow = document.querySelector('.direction-arrow.back');
 const forwardArrow = document.querySelector('.direction-arrow.forward');

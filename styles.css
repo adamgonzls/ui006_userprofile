@@ -75,7 +75,7 @@ p {
 
 main {
   margin: 0 auto;
-  max-width: 250px;
+  max-width: 300px;
   color: var(--platinum);
   background: var(--darkness);
   padding-top: 2.5rem;
@@ -94,7 +94,7 @@ nav {
   position: relative; }
   .user-pic img {
     display: block;
-    width: 250px;
+    width: 300px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     -webkit-transition: -webkit-filter .25s ease;
