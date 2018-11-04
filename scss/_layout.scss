@@ -42,9 +42,6 @@ nav {
     width: 250px;
     filter: grayscale(100%);
     transition: filter .25s ease;
-    &:hover {
-      filter: grayscale(80%);
-    }
   }
 }
 
