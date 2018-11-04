@@ -5,11 +5,15 @@ ul {
 .direction-arrow {
   position: absolute;
   border: 2px solid red;
-  bottom: 50%;
+  bottom: 33%;
   font-size: 36px;
+  font-weight: 100;
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
+  &:hover {
+    font-weight: 300;
+  }
   &.back {
     left: 0;
   }
@@ -30,13 +34,6 @@ input[type=submit] {
   transition: background 0.25s ease;
   &:hover {
     color: var(--brand-white);
-    background: var(--pizazz);
-  }
-  &.--weight-600 {
-    font-weight: 600;
-  }
-  &.--cod-text {
-    color: var(--cod);
   }
   &.--red-gradient-background {
     background: linear-gradient(to right, var(--vermillion) 51%, var(--pizazz) 100%);
