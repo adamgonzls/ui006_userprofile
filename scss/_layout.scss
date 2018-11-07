@@ -12,6 +12,7 @@
 }
 
 .page-container {
+  min-height: 100vh;
   background: var(--shadow);
 }
 
@@ -23,15 +24,11 @@ main {
   padding-top: calculateMargin(40px);
   text-align: center;
   h1 {
-    margin-bottom: 0;
+    margin-bottom: calculateMargin(4px);
     @include fontSize(13px);
     font-weight: 400;
     text-transform: uppercase;
   }
-}
-
-nav {
-  margin-bottom: calculateMargin(20px);
 }
 
 .user-pic {
