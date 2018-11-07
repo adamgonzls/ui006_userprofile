@@ -1,2 +1,2 @@
-# Project Starter Files
-A starting place for projects
+# UI Project - User Profile
+A user profile for a firm
