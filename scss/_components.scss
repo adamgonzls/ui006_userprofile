@@ -2,6 +2,19 @@ ul {
   list-style-type: none;
 }
 
+.team-member-navigation {
+  margin-bottom: calculateMargin(10px);
+  a {
+    margin: 0 3px;
+    display: inline-block;
+    border-radius: 20px;
+    width: 7px;
+    height: 7px;
+    background: var(--platinum);
+    text-indent: -9999px;
+  }
+}
+
 .direction-arrow {
   position: absolute;
   bottom: 33%;
