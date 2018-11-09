@@ -19,14 +19,11 @@ function loadUser(data) {
   const teamMemberEmail   = document.querySelector('.contact-info .email');
   const teamMemberPhone   = document.querySelector('.contact-info .phone');
   const teamMemberNav     = document.querySelector('.team-member-navigation');
-  // console.log(teamMemberNav)
   const teamMembers       = data.team;
   let displayMemberIndex  = 0;
   
-  console.log(teamMembers);
-  
-  showTeamMember(displayMemberIndex, teamMemberNav);
   showTeamMemberNav(teamMembers);
+  showTeamMember(displayMemberIndex);
 
   function showTeamMemberNav(teamMembers) {
     for (i = 0; i < teamMembers.length; i++) {
@@ -38,33 +35,19 @@ function loadUser(data) {
     }
   }
 
-  function showTeamMember(displayMemberIndex, teamMemberNav) {
-    teamMemberImage.src       = data.team[displayMemberIndex].image;
-    teamMemberImage.alt       = data.team[displayMemberIndex].name;
-    teamMemberName.innerHTML  = data.team[displayMemberIndex].name;
-    teamMemberTitle.innerHTML = data.team[displayMemberIndex].title;
-    teamMemberEmail.innerHTML = data.team[displayMemberIndex].email;
-    teamMemberPhone.innerHTML = data.team[displayMemberIndex].phone;
-    console.log(teamMemberNav.children[1]);
-    // teamMemberNav.children[1].text;
-    // console.log(children);
-    // let child = teamMemberNav.querySelectorAll("a");
-    // console.log(child);
-    // children[0].style.backgroundColor = "red";
-    // console.log(child)
-    // updateNav(displayMemberIndex);
+  function showTeamMember(displayMemberIndex) {
+    teamMemberImage.src       = teamMembers[displayMemberIndex].image;
+    teamMemberImage.alt       = teamMembers[displayMemberIndex].name;
+    teamMemberName.innerHTML  = teamMembers[displayMemberIndex].name;
+    teamMemberTitle.innerHTML = teamMembers[displayMemberIndex].title;
+    teamMemberEmail.innerHTML = teamMembers[displayMemberIndex].email;
+    teamMemberPhone.innerHTML = teamMembers[displayMemberIndex].phone;
+    updateNav(displayMemberIndex)
   }
 
-  // function updateNav(displayMemberIndex) {
-  //   console.log(Array.from(teamMemberNav.children));
-  // }
-
-  // function dotNav(e) {
-  //   console.log(e);
-  //   const target = event.target.innerHTML;
-  //   console.log(target);
-  //   showTeamMember(target);
-  // }
+  function updateNav(displayMemberIndex) {
+    console.log(displayMemberIndex);
+  }
 
   function advanceUser(e) {
     if(event.target.classList.contains('forward')) {
