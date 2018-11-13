@@ -46,7 +46,11 @@ function loadUser(data) {
   }
 
   function updateNav(displayMemberIndex) {
-    console.log(displayMemberIndex);
+    const els = document.querySelectorAll('.team-member-navigation a');
+    for (i = 0; i < els.length; i++) {
+      els[i].classList.remove("platinum");
+    }
+    teamMemberNav.childNodes[displayMemberIndex].className = "platinum";
   }
 
   function advanceUser(e) {
@@ -59,7 +63,6 @@ function loadUser(data) {
         showTeamMember(displayMemberIndex);
       }
     } else {
-      // console.log("current pos: " + displayMemberIndex + " total members: " + teamMembers.length);
       displayMemberIndex--;
       if ((displayMemberIndex) >= 0) {
         showTeamMember(displayMemberIndex);
@@ -72,5 +75,4 @@ function loadUser(data) {
 
   forwardArrow.addEventListener("click", advanceUser, false);
   backArrow.addEventListener("click", advanceUser, false);
-  // teamMemberLink.addEventListener("click", dotNav, false);
 }
