@@ -63,11 +63,7 @@ p {
   --platinum: #e4e3e4;
   --black-russian: #242528;
   --mountain-mist: #959595;
-  --alabaster: #f8f8f8;
-  --shark: #232527;
-  --vermillion: #ff4204;
-  --pizazz: #ff8a05
-; }
+  --alabaster: #f8f8f8; }
 
 .page-container {
   min-height: 100vh;
@@ -142,8 +138,10 @@ ul {
     border-radius: 20px;
     width: 7px;
     height: 7px;
-    background: var(--platinum);
+    background: var(--pumice);
     text-indent: -9999px; }
+    .team-member-navigation a.platinum {
+      background: var(--alabaster); }
 
 .direction-arrow {
   position: absolute;
